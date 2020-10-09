@@ -6,9 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import "/home/sadia/online_restaurant/node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById("root")
 );
 

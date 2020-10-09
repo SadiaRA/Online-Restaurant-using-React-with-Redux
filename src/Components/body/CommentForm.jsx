@@ -21,8 +21,7 @@ class CommentForm extends Component {
     }
 
     handleSubmit = event => {
-        event.preventDefault();
-      
+        //console.log(this.state);
         this.props.dispatch({
             type: 'ADD_COMMENT',
             payload: {
@@ -40,7 +39,7 @@ class CommentForm extends Component {
             comment: ''
         });
 
-       
+        event.preventDefault();
     }
 
     render() {

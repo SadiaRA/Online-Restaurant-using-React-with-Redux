@@ -1,6 +1,7 @@
 import Dishes from '../data/Dishes';
 import Comments from '../data/Comments';
 import { combineReducers } from 'redux';
+import * as actionTypes from './actionTypes'
 
 const dishReducer = (dishState = Dishes, action) => {
     return dishState;
@@ -8,7 +9,7 @@ const dishReducer = (dishState = Dishes, action) => {
 
 const commentReducer = (commentState = Comments, action) => {
     switch(action.type){
-        case 'ADD_COMMENT': 
+        case actionTypes.ADD_COMMENTg: 
             let comment = action.payload;
             comment.id = Comments.length;
             comment.date = new Date().toDateString();

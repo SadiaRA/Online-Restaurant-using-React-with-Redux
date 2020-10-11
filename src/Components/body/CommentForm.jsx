@@ -21,17 +21,8 @@ class CommentForm extends Component {
     }
 
     handleSubmit = event => {
-        //console.log(this.state);
-        this.props.dispatch({
-            type: 'ADD_COMMENT',
-            payload: {
-                dishId: this.props.dishId,
-                author: this.state.author,
-                rating: this.state.rating,
-                comment: this.state.comment
-            }
-
-        });
+       
+        this.props.addComment(this.props.dishId, this.state.rating, this.state.author, this.state.comment);
 
         this.setState({
             author: '',

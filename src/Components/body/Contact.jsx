@@ -26,7 +26,7 @@ class Contact extends Component {
     }
     handleSubmit = values => {
        
-        axios.post('http://localhost:3001/'+'feedback',values)
+        axios.post('http://localhost:3002/'+'feedback',values)
             .then(response => response.status)
             .then(status => {
                 if (status === 201) {

@@ -10,7 +10,7 @@ const MenuItem = (props) => {
             width="100%"
         
             alt={props.dish.name}
-            src={'http://localhost:3001/'+ props.dish.image}
+            src={'http://localhost:3002/'+ props.dish.image}
             style={{ opacity: "0.85",  float: 'left',
             width:  '300px',
             height: '200px',

@@ -11,7 +11,7 @@ export const addComment = (dishId, rating, author, comment) => dispatch => {
     }
     newComment.date = new Date().toISOString();
 
-    axios.post("http://localhost:3001/" + 'comments', newComment)
+    axios.post("http://localhost:3002/" + 'comments', newComment)
         .then(response => response.data)
         .then(comment => dispatch(commentConcat(comment)))
 }
@@ -31,7 +31,7 @@ export const loadComments = comments => ({
 export const fetchComments = () => dispatch => {
     dispatch(commentLoading());
 
-    axios.get("http://localhost:3001/comments")
+    axios.get("http://localhost:3002/comments")
         .then(response => response.data)
         .then(comments => dispatch(loadComments(comments)))
 }
@@ -47,7 +47,7 @@ export const dishesLoading = () => ({
 export const fetchDishes = () => dispatch => {
     dispatch(dishesLoading());
 
-    axios.get("http://localhost:3001/dishes")
+    axios.get("http://localhost:3002/dishes")
     .then(response => response.data)
         .then(dishes => dispatch(loadDishes(dishes)))
 }

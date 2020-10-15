@@ -7,7 +7,7 @@ const DishDetails = (props) => {
   return (
     <div>
       <Card style={{ marginTop: "10px" }}>
-        <CardImg top src={'http://localhost:3001/'+props.dish.image} alt={props.dish.name} />
+        <CardImg top src={'http://localhost:3002/'+props.dish.image} alt={props.dish.name} />
         <CardBody style={{ textAlign: "left" }}>
           <CardTitle>{props.dish.name}</CardTitle>
           <CardText>{props.dish.description}</CardText>

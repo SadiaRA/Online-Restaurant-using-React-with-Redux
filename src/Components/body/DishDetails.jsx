@@ -7,15 +7,15 @@ const DishDetails = (props) => {
   return (
     <div>
       <Card style={{ marginTop: "10px" }}>
-        <CardImg top src={props.dish.image} alt={props.dish.name} />
+        <CardImg top src={'http://localhost:3001/'+props.dish.image} alt={props.dish.name} />
         <CardBody style={{ textAlign: "left" }}>
           <CardTitle>{props.dish.name}</CardTitle>
           <CardText>{props.dish.description}</CardText>
           <CardText>Price: {props.dish.price}/-</CardText>
           <hr />
-          <LoadComments comments={props.comments} />
+          <LoadComments comments={props.comments} commentIsLoading={props.commentIsLoading}/>
           <hr/>
-          <CommentForm dishId={props.dish.id} addComment={props.addComment}/>
+          <CommentForm dishId={props.dish.id} addComment={props.addComment} />
         </CardBody>
       </Card>
     </div>

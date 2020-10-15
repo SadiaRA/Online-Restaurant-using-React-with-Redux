@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "/home/sadia/online_restaurant/node_modules/bootstrap/dist/css/bootstrap.min.css";
-
+import '/home/sadia/online_restaurant/node_modules/font-awesome/css/font-awesome.css'
 ReactDOM.render(
     <App />,
   document.getElementById("root")

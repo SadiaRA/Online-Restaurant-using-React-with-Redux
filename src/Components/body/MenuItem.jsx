@@ -8,9 +8,13 @@ const MenuItem = (props) => {
         <CardBody>
           <CardImg
             width="100%"
+        
             alt={props.dish.name}
-            src={props.dish.image}
-            style={{ opacity: "0.85" }}
+            src={'http://localhost:3001/'+ props.dish.image}
+            style={{ opacity: "0.85",  float: 'left',
+            width:  '300px',
+            height: '200px',
+            backgroundSize: 'cover'}}
           />
           <CardImgOverlay>
             <CardTitle
